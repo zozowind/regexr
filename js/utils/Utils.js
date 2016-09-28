@@ -222,6 +222,19 @@ Utils.isCanvasSupported = function () {
 	return !!(elem.getContext && elem.getContext("2d"));
 };
 
+Utils.isUnicodeSupported = function() {
+	var hasSupport = false;
+
+	try {
+		var regex = new RegExp("\u{61}", "u");
+		hasSupport = regex.unicode;
+	} catch (e) {
+
+	}
+
+	return hasSupport;
+}
+
 Utils.isIE = function () {
 	var result = /MSIE/ig.test(navigator.userAgent);
 	return result;

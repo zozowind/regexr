@@ -447,6 +447,13 @@ var library = {
 				desc:"When the multiline flag is enabled, beginning and end anchors (<code>^</code> and <code>$</code>) will match the start and end of a line, instead of the start and end of the whole string."+
 					"<p>Note that patterns such as <code>/^[\\s\\S]+$/m</code> may return matches that span multiple lines because the anchors will match the start/end of <b>any</b> line.</p>",
 				token:"m"
+				},
+				{
+				id:"flag_u",
+				label:"unicode",
+				tip:"TBD",
+				desc:"TBD",
+				token:"u"
 				}
 			]
 			}

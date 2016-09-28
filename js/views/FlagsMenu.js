@@ -42,6 +42,11 @@ p.buildUI = function (el) {
 	for (var i = 0; i < checks.length; i++) {
 		checks[i].addEventListener("click", this);
 	}
+
+	if (!$.isUnicodeSupported()) {
+		var el = $.el("a[data-unicode]");
+		$.remove(el);
+	}
 };
 
 // public methods:

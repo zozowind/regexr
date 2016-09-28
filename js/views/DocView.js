@@ -51,7 +51,7 @@ var p = DocView.prototype;
 DocView.DEFAULT_EXPRESSION = "/([A-Z])\\w+/g";
 DocView.DEFAULT_REPLACE = "\\n# $&:\\n\\t";
 DocView.DEFAULT_LIST = "$1 - $&\\n";
-DocView.VALID_FLAGS = "igm";
+DocView.VALID_FLAGS = "igmu";
 
 p.isMac = false; // for keyboard shortcuts.
 p.ctrlKey = null;
