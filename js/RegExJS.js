@@ -32,7 +32,7 @@ s.match = function (regex, str, callback) {
 				clearTimeout(s.id);
 				callback(error, matches);
 			}
-		}
+		};
 		s.worker.postMessage({regex: regex, str: str});
 	} else {
 		while (!error) {
