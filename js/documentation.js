@@ -1,5 +1,5 @@
 var library = {
-	id:"Library",
+	id:i18n.__("Library"),
 
 	kids: [
 		{
@@ -528,7 +528,7 @@ var misc = {
 	kids:[
 		{
 		id:"char",
-		label:"character",
+		label:i18n.__("character"),
 		tip:"Matches a {{getChar()}} character (char code {{code}})."
 		},
 		{
