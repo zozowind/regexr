@@ -3,90 +3,90 @@ var library = {
 
 	kids: [
 		{
-		label: "Help",
+		label: i18n.__("Help"),
 		icon: "&#xE195;",
 		desc: "Help for the RegExr application. See the <b>Reference</b> for help with Regular Expressions.",
 		kids: [
 
 			{
-			label:"Video Tutorial",
+			label:i18n.__("Video Tutorial"),
 			desc:"Check out the three minute video tutorial for a quick introduction to all the features of RegExr."+
 				"<p><a href='javascript:regexr.showVideo();'>Click here</a> to watch the video.</p>"
 			},
 			{
-			label:"About",
+			label:i18n.__("About"),
 			desc:"Created by <a href='http://twitter.com/gskinner/' target='_blank'>Grant Skinner</a> & the <a href='http://gskinner.com/' target='_blank'>gskinner</a> team, using the <a href='http://createjs.com/' target='_blank'>CreateJS</a> & <a href='http://codemirror.net/' target='_blank'>CodeMirror</a> libraries."+
 				"<p>You can provide feedback, log bugs, or access the source code of RegExr on <a href='http://github.com/gskinner/regexr/' target='_blank'>GitHub</a>.</p>"+
 				// "Want to support RegExr updates, or buy us a beer as thanks? Feel free to <a href='#' target='_blank'>donate</a>."+ // TODO: link.
 				"<p>RegExr v1 is still online at <a href='v1/' target='_blank'>regexr.com/v1/</a>.</p>"
 			},
 			{
-			label:"RegEx engine",
+			label:i18n.__("RegEx engine"),
 			desc:"While the core feature set of regular expressions is fairly consistent, different implementations (ex. Perl vs Java) may have different features or behaviours."+
 				"<p>RegExr uses your browser's RegExp engine for matching, and its syntax highlighting and documentation reflect the JavaScript RegExp standard.</p>"
 			},
 			{
 			id:"infinite",
-			label:"The 'infinite' error",
+			label:i18n.__("The 'infinite' error"),
 			desc:"The expression can match 0 characters, and therefore matches infinitely.",
 			ext:" <h1>Example:</h1><code>.*</code> can match an empty string of <code>0</code> characters, and therefore will match infinitely."
 			},
 			{
 			id:"timeout",
-			label:"The 'timeout' error",
+			label:i18n.__("The 'timeout' error"),
 			desc:"The expression took longer than 250ms to execute.",
 			ext:" For some expressions the time to execute grows exponentially, often due to nested quantifiers. <h1>Example:</h1> When <code>(a+)+Z</code> is executed on <code>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</code> it attempts to match any number of 'a' characters any number of times, which results in exponential growth."
 			},
 			{
-			label:"Getting started",
+			label:i18n.__("Getting started"),
 			desc:"RegExr provides real-time visual results, syntax highlighting, tooltips, and undo/redo ({{getCtrlKey()}}-Z / Y) so it's easy and fun to explore Regular Expressions."+
 				"<p>Browse through the <b>Reference</b> and test different tokens to see what they do, then check out the <b>Examples</b> to see how tokens work together.</p>"
 			},
 			{
-			label:"Expression panel",
+			label:i18n.__("Expression panel"),
 			desc:"This is where you enter a regular expression to test. The results in the <b>Text</b> panel will update as you type. Roll over the expression for information on each token."+
 				"<p>The buttons to the right allow you to save & share your pattern, or edit the expression flags. Saved patterns can be updated for 24hrs.</p>"+
 				"<p>The results bubble will show the number of matches, or indicate errors.</p>"
 			},
 			{
-			label:"Text panel",
+			label:i18n.__("Text panel"),
 			desc:"This is where you enter text to test your expression against. Drag & drop a text file to load its contents."+
 				"<p>Matches will be highlighted as you type. Roll over a match for information on the match and its capture groups.</p>"+
 				"<p>Lighter colored caps at the start or end of a line indicate the match continues between lines.</p>"
 			},
 			{
-			label:"Tools panel",
+			label:i18n.__("Tools panel"),
 			desc:"Click the <b>Tools</b> title bar below the <b>Text</b> panel to show or hide the <b>Tools</b> panel."+
 				"<p>Tools provide different ways of working with or investigating your results.</p>",
 			kids: [
 				{
-				label:"Replace",
+				label:i18n.__("Replace"),
 				desc:"The <b>Replace</b> tool replaces matches with a specified string or pattern."+
 					"<p>Matches in the <b>Text</b> panel are replaced by the substitution string & displayed as you type.</p>"+
 					"<p><a href='javascript:showLib(\"subst\")'>Substitution tokens</a> (ex. <code>$&</code> or <code>$1</code>) and escaped characters compatible with the JS string format are supported, such as <code>\\n</code>, <code>\\t</code> & <code>\\u0009</code>.</p>"+
 					"<p>Roll over tokens for information.</p>"
 				},
 				{
-				label:"List",
+				label:i18n.__("List"),
 				desc:"The <b>List</b> tool lists all found matches."+
 					"<p>You can specify either a simple delimiter (ex. <code>,</code> or <code>\\n</code>), or use <a href='javascript:showLib(\"subst\")'>substitution tokens</a> to generate more advanced reports. For example, <code>$1\\n</code> would list all group 1 results.</p>"+
 					"<p>Escaped characters compatible with the JS string format are supported, such as <code>\\n</code>, <code>\\t</code> & <code>\\u0009</code>.</p>"+
 					"<p>Roll over tokens for information.</p>"
 				},
 				{
-				label:"Details",
+				label:i18n.__("Details"),
 				desc:"The <b>Details</b> tool displays the full text of a match and it's capture groups."+
 					"<p>Click on a highlighted match in the <b>Text</b> panel to display details for that match.</p>"
 				},
 				{
-				label:"Explain",
+				label:i18n.__("Explain"),
 				desc:"The <b>Explain</b> tool displays a detailed breakdown of the <b>Expression</b>."+
 					"<p>Mouse over the explanation to highlight the related tokens in the <b>Expression</b> panel.</p>"
 				}
 			]
 			},
 			{
-			label:"Library panel",
+			label:i18n.__("Library panel"),
 			desc:"The <b>Library</b> (this panel) includes <b>help</b> content and a <b>reference</b> that includes info on all regular expression tokens and flags."+
 				"<p>Tap a selected item in the reference to insert it into your <b>Expression</b>. Click the <span class='icon'>&#xE212;</span> beside an example to load it.</p>"+
 				"<p>The library also includes <b>example</b> patterns, searchable <b>community</b> submissions, and your saved <b>favourites</b>.</p>"
@@ -95,7 +95,7 @@ var library = {
 		},
 
 		{
-		label: "Reference",
+		label: i18n.__("Reference"),
 		id: "reference",
 		icon: "&#xE072;",
 		desc: "Information on all of the tokens available to create regular expressions."
@@ -104,26 +104,26 @@ var library = {
 		target:"expr",
 		kids: [
 			{
-			label: "Character classes",
+			label: i18n.__("Character classes"),
 			id: "charclasses",
 			desc: "Character classes match a character from a specific set. There are a number of predefined character classes and you can also define your own sets.",
 			kids: [
 				{
-				id:"dot",
+				id:i18n.__("dot"),
 				desc:"Matches any character except line breaks.",
 				ext:" Equivalent to <code>[^\\n\\r]</code>.",
 				example:[".", "glib jocks vex dwarves!"],
 				token:"."
 				},
 				{
-				label:"match any",
+				label:i18n.__("match any"),
 				desc:"A character set that can be used to match any character, including line breaks."+
 					"<p>An alternative is <code>[^]</code>, but it is not supported in all browsers.</p>",
 				example:["[\\s\\S]", "glib jocks vex dwarves!"],
 				token:"[\\s\\S]"
 				},
 				{
-				id:"word",
+				id:i18n.__("word"),
 				desc:"Matches any word character (alphanumeric & underscore).",
 				ext:" Only matches low-ascii characters (no accented or non-roman characters). Equivalent to <code>[A-Za-z0-9_]</code>",
 				example:["\\w","bonjour, mon fr\u00E8re"],
@@ -131,7 +131,7 @@ var library = {
 				},
 				{
 				id:"notword",
-				label: "not word",
+				label: i18n.__("not word"),
 				desc:"Matches any character that is not a word character (alphanumeric & underscore).",
 				ext:" Equivalent to <code>[^A-Za-z0-9_]</code>",
 				example:["\\W","bonjour, mon fr\u00E8re"],
@@ -146,7 +146,7 @@ var library = {
 				},
 				{
 				id:"notdigit",
-				label: "not digit",
+				label: i18n.__("not digit"),
 				desc:"Matches any character that is not a digit character (0-9).",
 				ext:" Equivalent to <code>[^0-9]</code>.",
 				example:["\\D","+1-(444)-555-1234"],
@@ -160,21 +160,21 @@ var library = {
 				},
 				{
 				id:"notwhitespace",
-				label: "not whitespace",
+				label: i18n.__("not whitespace"),
 				desc:"Matches any character that is not a whitespace character (spaces, tabs, line breaks).",
 				example:["\\S", "glib jocks vex dwarves!"],
 				token:"\\S"
 				},
 				{
 				id:"set",
-				label: "character set",
+				label: i18n.__("character set"),
 				desc:"Match any character in the set.",
 				example:["[aeiou]","glib jocks vex dwarves!"],
 				token:"[ABC]"
 				},
 				{
 				id:"setnot",
-				label: "negated set",
+				label: i18n.__("negated set"),
 				desc:"Match any character that is not in the set.",
 				example:["[^aeiou]","glib jocks vex dwarves!"],
 				token:"[^ABC]"
@@ -190,13 +190,13 @@ var library = {
 			},
 
 			{
-			label:"Anchors",
+			label:i18n.__("Anchors"),
 			id:"anchors",
 			desc:"Anchors are unique in that they match a position within a string, not a character.",
 			kids:[
 				{
 				id:"bof",
-				label:"beginning",
+				label:i18n.__("beginning"),
 				desc:"Matches the beginning of the string, or the beginning of a line if the multiline flag (<code>m</code>) is enabled.",
 				ext:" This matches a position, not a character.",
 				 example:["^\\w+","she sells seashells"],
@@ -204,7 +204,7 @@ var library = {
 				},
 				{
 				id:"eof",
-				label:"end",
+				label:i18n.__("end"),
 				desc:"Matches the end of the string, or the end of a line if the multiline flag (<code>m</code>) is enabled.",
 				ext:" This matches a position, not a character.",
 				example:["\\w+$","she sells seashells"],
@@ -212,7 +212,7 @@ var library = {
 				},
 				{
 				id:"wordboundary",
-				label:"word boundary",
+				label:i18n.__("word boundary"),
 				desc:"Matches a word boundary position such as whitespace, punctuation, or the start/end of the string.",
 				ext:" This matches a position, not a character.",
 				example:["s\\b","she sells seashells"],
@@ -220,7 +220,7 @@ var library = {
 				},
 				{
 				id:"notwordboundary",
-				label: "not word boundary",
+				label: i18n.__("not word boundary"),
 				desc:"Matches any position that is not a word boundary.",
 				ext:" This matches a position, not a character.",
 				example:["s\\B","she sells seashells"],
@@ -229,13 +229,13 @@ var library = {
 			]
 			},
 			{
-			label: "Escaped characters",
+			label: i18n.__("Escaped characters"),
 			id:"escchars",
 			desc: "Some characters have special meaning in regular expressions and must be escaped. All escaped characters begin with the <code>\\</code> character.<br/><br/> Within a character set, only <code>\\</code>, <code>-</code>, and <code>]</code> need to be escaped.",
 			kids: [
 				{
 				id:"escoctal",
-				label:"octal escape",
+				label:i18n.__("octal escape"),
 				desc:"Octal escaped character in the form <code>\\000</code>.",
 				ext:" Value must be less than 255 (<code>\\377</code>).",
 				example:["\\251","RegExr is \u00A92014"],
@@ -243,21 +243,21 @@ var library = {
 				},
 				{
 				id:"eschexadecimal",
-				label:"hexadecimal escape",
+				label:i18n.__("hexadecimal escape"),
 				desc:"Hexadecimal escaped character in the form <code>\\xFF</code>.",
 				example:["\\xA9","RegExr is \u00A92014"],
 				token:"\\xFF"
 				},
 				{
 				id:"escunicode",
-				label:"unicode escape",
+				label:i18n.__("unicode escape"),
 				desc:"Unicode escaped character in the form <code>\\uFFFF</code>.",
 				example:["\\u00A9","RegExr is \u00A92014"],
 				token:"\\uFFFF"
 				},
 				{
 				id:"esccontrolchar",
-				label:"control character escape",
+				label:i18n.__("control character escape"),
 				desc:"Escaped control character in the form <code>\\cZ</code>.",
 				ext:" This can range from <code>\\cA</code> (NULL, char code 0) to <code>\\cZ</code> (EM, char code 25). <h1>Example:</h1><code>\\cI</code> matches TAB (char code 9).",
 				token:"\\cI"
@@ -265,21 +265,21 @@ var library = {
 			]
 			},
 			{
-			label: "Groups & Lookaround",
+			label: i18n.__("Groups & Lookaround"),
 			id:"groups",
 			desc: "Groups allow you to combine a sequence of tokens to operate on them together. Capture groups can be referenced by a backreference and accessed separately in the results."+
 				 "<hr/>Lookaround lets you match a group without including it in the result.",
 			kids: [
 				{
 				id:"group",
-				label: "capturing group",
+				label: i18n.__("capturing group"),
 				desc: "Groups multiple tokens together and creates a capture group for extracting a substring or using a backreference.",
 				example:["(ha)+","hahaha haa hah!"],
 				token:"(ABC)"
 				},
 				{
 				id:"backref",
-				label:"backreference",
+				label:i18n.__("backreference"),
 				tip:"Matches the results of capture group #{{group.num}}.",
 				desc:"Matches the results of a previous capture group. For example <code>\\1</code> matches the results of the first capture group & <code>\\3</code> matches the third.",
 				example:["(\\w)a\\1","hah dad bad dab gag gab"],
@@ -287,41 +287,41 @@ var library = {
 				},
 				{
 				id:"noncapgroup",
-				label: "non-capturing group",
+				label: i18n.__("non-capturing group"),
 				desc:"Groups multiple tokens together without creating a capture group.",
 				example:["(?:ha)+","hahaha haa hah!"],
 				token:"(?:ABC)"
 				},
 				{
 				id:"poslookahead",
-				label: "positive lookahead",
+				label: i18n.__("positive lookahead"),
 				desc:"Matches a group after the main expression without including it in the result.",
 				example:["\\d(?=px)","1pt 2px 3em 4px"],
 				token:"(?=ABC)"
 				},
 				{
 				id:"neglookahead",
-				label: "negative lookahead",
+				label: i18n.__("negative lookahead"),
 				desc:"Specifies a group that can not match after the main expression (if it matches, the result is discarded).",
 				example:["\\d(?!px)","1pt 2px 3em 4px"],
 				token:"(?!ABC)"
 				},
 				{
 				id:"poslookbehind",
-				label: "positive lookbehind*",
+				label: i18n.__("positive lookbehind*"),
 				desc:"<b>*Not supported in JavaScript.</b> Matches a group before the main expression without including it in the result.",
 				token:"(?<=ABC)"
 				},
 				{
 				id:"neglookbehind",
-				label: "negative lookbehind*",
+				label: i18n.__("negative lookbehind*"),
 				desc:"<b>*Not supported in JavaScript.</b> Specifies a group that can not match before the main expression (if it matches, the result is discarded).",
 				token:"(?&lt;!ABC)"
 				}
 			]
 			},
 			{
-			label: "Quantifiers & Alternation",
+			label: i18n.__("Quantifiers & Alternation"),
 			id:"quants",
 			desc: "Quantifiers indicate that the preceding token must be matched a certain number of times. By default, quantifiers are greedy, and will match as many characters as possible."+
 				"<hr/>Alternation acts like a boolean OR, matching one sequence or another.",
@@ -340,7 +340,7 @@ var library = {
 				},
 				{
 				id:"quant",
-				label:"quantifier",
+				label:i18n.__("quantifier"),
 				desc:"Matches the specified quantity of the previous token. "+
 					"<code>{1,3}</code> will match 1 to 3. "+
 					"<code>{3}</code> will match exactly 3. "+
@@ -350,7 +350,7 @@ var library = {
 				},
 				{
 				id:"opt",
-				label:"optional",
+				label:i18n.__("optional"),
 				desc:"Matches 0 or 1 of the preceding token, effectively making it optional.",
 				example: ["colou?r", "color colour"],
 				token:"?"
@@ -364,7 +364,7 @@ var library = {
 				},
 				{
 				id:"alt",
-				label:"alternation",
+				label:i18n.__("alternation"),
 				desc:"Acts like a boolean OR. Matches the expression before or after the <code>|</code>.",
 				ext:"<p>It can operate within a group, or on a whole expression. The patterns will be tested in order.</p>",
 				example:["b(a|e|i)d","bad bud bod bed bid"],
@@ -374,44 +374,44 @@ var library = {
 			},
 
 			{
-			label: "Substitution",
+			label: i18n.__("Substitution"),
 			desc: "These tokens are used in a substitution string to insert different parts of the match.",
 			target: "subst",
 			id:"subst",
 			kids: [
 				{
 				id:"subst_match",
-				label: "match",
+				label:  i18n.__("match"),
 				desc:"Inserts the matched text.",
 				token:"$$&"
 				},
 				{
 				id:"subst_num",
-				label: "capture group",
+				label: i18n.__("capture group"),
 				tip:"Inserts the results of capture group #{{group.num}}.",
 				desc:"Inserts the results of the specified capture group (ex. $3 will insert the third capture group).",
 				token:"$1"
 				},
 				{
 				id:"subst_pre",
-				label: "before match",
+				label: i18n.__("before match"),
 				desc:"Inserts the portion of the source string that precedes the match.",
 				token:"$$`"
 				},
 				{
 				id:"subst_post",
-				label: "after match",
+				label: i18n.__("after match"),
 				desc:"Inserts the portion of the source string that follows the match.",
 				token:"$$'"
 				},
 				{
 				id:"subst_$",
-				label: "escaped $",
+				label: i18n.__("escaped $"),
 				desc:"Inserts a dollar sign character ($).",
 				token:"$$$$"
 				},
 				{
-				label: "escaped characters",
+				label: i18n.__("escaped characters"),
 				token: "\\n",
 				desc: "Escaped characters compatible with the JS string format, such as <code>\\n</code>, <code>\\t</code>, <code>\\x09</code>, & <code>\\u0009</code> are supported in the substitution string."
 				}
@@ -426,14 +426,14 @@ var library = {
 			kids: [
 				{
 				id:"flag_i",
-				label: "ignore case",
+				label: i18n.__("ignore case"),
 				desc:"Makes the whole expression case-insensitive.",
 				ext:" For example, <code>/aBc/i</code> would match <code>AbC</code>.",
 				token:"i"
 				},
 				{
 				id:"flag_g",
-				label: "global search",
+				label: i18n.__("global search"),
 				tip: "Retain the index of the last match, allowing iterative searches.",
 				desc:"Retain the index of the last match, allowing subsequent searches to start from the end of the previous match."+
 					"<p>Without the global flag, subsequent searches will return the same match.</p><hr/>"+
@@ -455,14 +455,14 @@ var library = {
 		},
 		{
 		id:"cheatsheet",
-		label: "Cheatsheet",
+		label: i18n.__("Cheatsheet"),
 		max:true,
 		kids:[],
 		icon: "&#xE603;",
 		desc:"pulled from html"
 		},
 		{
-		label: "Examples",
+		label: i18n.__("Examples"),
 		id:"examples",
 		icon: "&#xE065;",
 		desc: "Example patterns to get you started with Regular Expressions."
@@ -506,14 +506,14 @@ var library = {
 		]
 		},
 		{
-		label: "Community",
+		label: i18n.__("Community"),
 		icon: "&#xE044;",
 		id: "community",
 		kids: [],
 		desc: ""
 		},
 		{
-		label: "Favourites",
+		label: i18n.__("Favourites"),
 		icon: "&#xE013;",
 		id:"favorites",
 		kids:[],
@@ -533,12 +533,12 @@ var misc = {
 		},
 		{
 		id:"js_char",
-		label: "character",
+		label: i18n.__("character"),
 		tip:"Inserts a {{getChar()}} character (char code {{code}})."
 		},
 		{
 		id:"quant",
-		label: "quantifier",
+		label: i18n.__("quantifier"),
 		tip:"Match {{getQuant()}} of the preceding token."
 		},
 		{
@@ -575,7 +575,7 @@ var errors = {
 // add the "All" reference section. This is kind of fragile at the moment.
 kids = library.kids;
 kids.unshift({
-	label: "All",
+	label: i18n.__("All"),
 	desc: "All RegEx tokens supported in JS. Does not include Substitution or Flags.",
 	kids: []
 	});
